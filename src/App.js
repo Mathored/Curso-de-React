@@ -1,4 +1,5 @@
 import './App.css';
+import ItemListContainer from './components/Catalog/ItemListContainer';
 import {NavBar} from './components/NavBar/NavBar';
 
 
@@ -9,6 +10,7 @@ function App() {
         <NavBar/>
       </header>
       <section className='App-section'>
+        <ItemListContainer/>
       </section>
     </div>
   );

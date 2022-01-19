@@ -1,5 +1,4 @@
 .App-header {
-  min-height: 18vh;
   font-size: calc(12px + 2vmin);
   background-color: rgb(26, 55, 77);
 }
@@ -23,9 +22,18 @@
 
 .App-section{
   background-color: rgb(26, 55, 77);
-  padding:90vh;
 }
 li:hover{
   font-weight: bold;
   color:rgb(177, 208, 224);
+}
+
+.cart{
+  width:45px;
+}
+
+.listContainer{
+    color:white;
+    font-size: xx-large;
+    padding-left: 50vh;
 }
