@@ -16,7 +16,7 @@ function App() {
       console.log(producto);
     }) 
     .catch((error)=>console.error(error));
-  }, []);
+  });
   return (
     <div className="App">
       <header className="App-header">

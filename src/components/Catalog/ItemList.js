@@ -1,7 +1,7 @@
 import React from 'react';
 import { Item } from './Item';
 
-export const ItemList = (producto) => {
+export const ItemList = (productos) => {
   return <div>
           {productos.map((producto) => (
           <Item key = {producto.id} producto = {producto}/>
@@ -40,6 +40,6 @@ export const productos = [
 
 export function getProductos() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(productos), 5000);
+    setTimeout(() => resolve(productos), 2000);
   });
 }

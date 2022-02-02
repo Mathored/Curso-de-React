@@ -3,7 +3,6 @@ export function Item ({ producto }) {
 
   return (
     <div style={cardStyles}>
-      <img src={producto.img} alt={producto.name} />
       <p>Nombre: {producto.name}</p>
       <p>Descripcion: {producto.description}</p>
       <p>Precio: {producto.price}</p>
