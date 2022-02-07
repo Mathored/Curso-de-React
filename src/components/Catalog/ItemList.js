@@ -1,16 +1,9 @@
 import React from 'react';
-import { Item } from './Item';
-
-export const ItemList = (productos) => {
-  return <div>
-          {productos.map((producto) => (
-          <Item key = {producto.id} producto = {producto}/>
-        ))}
-  </div>;
-};
 
 
-export const productos = [
+
+
+export const PRODUCTS = [
   {
     id: 0,
     name: "Oreo",
@@ -40,6 +33,6 @@ export const productos = [
 
 export function getProductos() {
   return new Promise((resolve, reject) => {
-    setTimeout(() => resolve(productos), 2000);
+    setTimeout(() => resolve(PRODUCTS), 2000);
   });
 }

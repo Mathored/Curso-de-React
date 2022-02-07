@@ -16,7 +16,8 @@
 
 .App-section{
   background-color: rgb(26, 55, 77);
-  padding: 45%;
+  padding-left: 40%;
+  padding-top: 5%;
 }
 li:hover{
   font-weight: bold;

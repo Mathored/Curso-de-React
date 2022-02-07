@@ -1,29 +1,35 @@
 import './App.css';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import {NavBar} from './components/NavBar/NavBar';
-import { ItemList, getProductos } from './components/Catalog/ItemList';
-import { useState } from 'react/cjs/react.production.min';
-
+import {getProductos} from "./components/Catalog/ItemList"
+import Item from './components/Item';
 
 
 function App() {
-  const [producto, setProducts]= useState([]);
 
-  useEffect (()=>{
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
     getProductos()
-    .then((data) => {
-      setProducts(data)
-      console.log(producto);
-    }) 
-    .catch((error)=>console.error(error));
-  });
+      .then((data) => setProducts(data))
+      .catch((error) => console.error(error))
+      .finally(() => setIsLoading(false));
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
         <NavBar/>
       </header>
       <section className='App-section'>
-        <ItemList/>
+
+      {isLoading ? (
+        <p>Cargando...</p>
+      ) : (
+        products.map((product) => <Item key={product.id} product={product} />)
+      )}
       </section>
     </div>
   );
